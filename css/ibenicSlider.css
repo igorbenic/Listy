@@ -1,6 +1,6 @@
 #ibenicSlider,#ibenicSlider2 {
   position: relative;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 #ibenicSlider .carousel-container,#ibenicSlider2 .carousel-container {
   overflow: hidden;
