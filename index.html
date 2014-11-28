@@ -78,12 +78,12 @@
   </pre>
 </div>
 
-div id="example" class="container">
+<div id="example" class="container">
   <div class="page-header">
   <h1>Example</h1>
   </div>
   <div id="ibenicSlider" >
-	  				  <!-- Wrapper for slides -->
+	  				  
 		  <div class="carousel-container" role="listbox">
 			  
 			  <ul class="list-inline latestcovers">
@@ -99,7 +99,7 @@ div id="example" class="container">
 			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
 			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
 			  </ul>
-			  </div><!-- item end-->
+			  </div>
 
 			  <!-- Controls -->
 					  <a class="left carousel-covers carousel-control" >
@@ -110,16 +110,17 @@ div id="example" class="container">
 					    <span class="glyphicon-chevron-right" aria-hidden="true"></span>
 					    <span class="sr-only">Next</span>
 					  </a>
-		  </div><!-- carousel inner-->
+		  </div>
 
   <pre>
-    $("#ibenicSlider .carousel-container").ibenicSlider({
-    	/*Defaults*/
-    itemNo: 3, //Number of items to show
-    itemSlideNo: 1, //Number of items to slide
-    handleLeft: '.goLeft', //Control to slide left
-    handleRight: '.goRight',//Control to slide right
-    container: "#ibenicSlider"
+   $("#ibenicSlider .carousel-container").ibenicSlider({
+    	
+    itemNo: 3,
+    itemSlideNo: 1,
+    handleLeft: '#ibenicSlider .left',
+    handleRight: '#ibenicSlider .right',
+    container: "#ibenicSlider",
+    	
     });
   </pre>
 </div>
@@ -132,8 +133,8 @@ div id="example" class="container">
 <script>
    $("#ibenicSlider .carousel-container").ibenicSlider({
     	
-    itemNo: 5,
-    itemSlideNo: 5,
+    itemNo: 3,
+    itemSlideNo: 1,
     handleLeft: '#ibenicSlider .left',
     handleRight: '#ibenicSlider .right',
     container: "#ibenicSlider",
