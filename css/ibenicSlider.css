@@ -6,12 +6,18 @@
   overflow: hidden;
   margin: 0 auto;
 }
-#ibenicSlider .carousel-container .latestcovers li,
-#ibenicSlider2 .carousel-container .latestcovers li{
+#ibenicSlider .carousel-container li,{
+  float: left;
+  width: 136px;
+ 
+}
+
+#ibenicSlider2 .carousel-container li{
   float: left;
   width: 136px;
   margin-right: 20px;
 }
+
 #ibenicSlider .carousel-control,
 #ibenicSlider2 .carousel-control{
   background-image: none;
