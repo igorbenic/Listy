@@ -1,0 +1,4 @@
+ibenicSlider
+============
+
+Responsive List Slider
