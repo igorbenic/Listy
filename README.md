@@ -1,6 +1,8 @@
 ibenicSlider
 ============
 
+Responsive List Slider - 2kb minifed, 6kb production!
+
 <div id="about" class="container">
 <div class="page-header">
 <h1>About</h1>
