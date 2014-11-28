@@ -1,23 +1,29 @@
+
+.carousel-container {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carousel-container li {float:left;}
+
 #ibenicSlider,#ibenicSlider2 {
   position: relative;
   margin: 1em auto;
 }
 
+#ibenicSlider2 {background-color:#484848;}
 #ibenicSlider ul,#ibenicSlider2 ul{margin-left:0;}
-#ibenicSlider .carousel-container,#ibenicSlider2 .carousel-container {
-  overflow: hidden;
-  margin: 0 auto;
-}
+
+
 #ibenicSlider .carousel-container li{
-  float: left;
+  
   width: 136px;
  margin:0;
-padding:0;
+ padding:0;
  border:2px solid #484848;
 }
 
 #ibenicSlider2 .carousel-container li{
-  float: left;
+ 
   width: 136px;
   margin-right: 20px;
 }
