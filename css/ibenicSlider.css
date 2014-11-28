@@ -18,13 +18,17 @@
   margin-right: 20px;
 }
 
-#ibenicSlider .carousel-control,
-#ibenicSlider2 .carousel-control{
-  background-image: none;
-}
-#ibenicSlider.carousel-control, #ibenicSlider2.carousel-control {
+
+#ibenicSlider .carousel-control, #ibenicSlider2 .carousel-control {
   position: absolute;
   top: 20%;
+}
+
+#ibenicSlider .carousel-control.left {
+  left:-20px;
+}
+#ibenicSlider .carousel-control.right {
+  right:-20px;
 }
 
 
