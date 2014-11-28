@@ -36,3 +36,12 @@ resize: true //this is default, if we dont want any resize we set it to false
 });
 </pre>
 </div>
+
+div class="page-header">
+<h1>Examples</h1>
+</div>
+<p>
+They can be viewed on the demo site: http://igorbenic.github.io/ibenicSlider/#example
+</p>
+
+</div>
