@@ -9,7 +9,7 @@
 #ibenicSlider .carousel-container li{
   float: left;
   width: 136px;
-
+ margin:0;
 }
 
 #ibenicSlider2 .carousel-container li{
@@ -26,10 +26,10 @@
 }
 
 #ibenicSlider .carousel-control.left {
-  left:-20px;
+  left:-50px;
 }
 #ibenicSlider .carousel-control.right {
-  right:-20px;
+  right:-50px;
 }
 
 
