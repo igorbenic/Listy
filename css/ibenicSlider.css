@@ -22,6 +22,7 @@
 #ibenicSlider .carousel-control, #ibenicSlider2 .carousel-control {
   position: absolute;
   top: 20%;
+  background-image:none;
 }
 
 #ibenicSlider .carousel-control.left {
