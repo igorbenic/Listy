@@ -123,6 +123,50 @@
     	
     });
   </pre>
+  
+  
+  
+  <div id="ibenicSlider2" >
+	  				  
+		  <div class="carousel-container" role="listbox">
+			  
+			  <ul class="list-inline latestcovers">
+			  	<li><img src="http://placehold.it/153x200" width="153" class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  </ul>
+			  </div>
+
+			  <!-- Controls -->
+					  <a class="left carousel-covers carousel-control" >
+					    <span class="glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right opposite carousel-covers carousel-control" >
+					    <span class="glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+		  </div>
+
+  <pre>
+   $("#ibenicSlider .carousel-container").ibenicSlider({
+    	
+    itemNo: 3,
+    itemSlideNo: 1,
+    handleLeft: '#ibenicSlider .left',
+    handleRight: '#ibenicSlider .right',
+    container: "#ibenicSlider",
+    	
+    });
+  </pre>
 </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -138,6 +182,16 @@
     handleLeft: '#ibenicSlider .left',
     handleRight: '#ibenicSlider .right',
     container: "#ibenicSlider",
+    	
+    });
+    
+     $("#ibenicSlider2 .carousel-container").ibenicSlider({
+    	
+    itemNo: 5,
+    itemSlideNo: 3,
+    handleLeft: '#ibenicSlider2 .left',
+    handleRight: '#ibenicSlider2 .right',
+    container: "#ibenicSlider2",
     	
     });
 </script>
