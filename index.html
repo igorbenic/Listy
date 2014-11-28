@@ -37,6 +37,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">About</a></li>
         <li><a href="#usage">Usage</a></li>
+        <li><a href="#example">Example</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -67,12 +68,58 @@
   <pre>
     $(selector).ibenicSlider({
     	/*Defaults*/
-    		itemNo: 3, //Number of items to show
-    		itemSlideNo: 1, //Number of items to slide
-    		handleLeft: '.goLeft', //Control to slide left
-        handleRight: '.goRight',//Control to slide right
-        container: null, //if we want an upper container so we can easily customize the position with CSS, set it to a selector such as "#container"
-    	  resize: true //this is default, if we dont want any resize we set it to false
+    itemNo: 3, //Number of items to show
+    itemSlideNo: 1, //Number of items to slide
+    handleLeft: '.goLeft', //Control to slide left
+    handleRight: '.goRight',//Control to slide right
+    container: null, //if we want an upper container so we can easily customize the position with CSS, set it to a selector such as "#container"
+    resize: true //this is default, if we dont want any resize we set it to false
+    });
+  </pre>
+</div>
+
+div id="example" class="container">
+  <div class="page-header">
+  <h1>Example</h1>
+  </div>
+  <div id="ibenicSlider" >
+	  				  <!-- Wrapper for slides -->
+		  <div class="carousel-container" role="listbox">
+			  
+			  <ul class="list-inline latestcovers">
+			  	<li><img src="http://placehold.it/153x200" width="153" class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  	<li><img src="http://placehold.it/153x200" width="153"class="img-responsive"/></li>
+			  </ul>
+			  </div><!-- item end-->
+
+			  <!-- Controls -->
+					  <a class="left carousel-covers carousel-control" >
+					    <span class="glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right opposite carousel-covers carousel-control" >
+					    <span class="glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+		  </div><!-- carousel inner-->
+
+  <pre>
+    $("#ibenicSlider .carousel-container").ibenicSlider({
+    	/*Defaults*/
+    itemNo: 3, //Number of items to show
+    itemSlideNo: 1, //Number of items to slide
+    handleLeft: '.goLeft', //Control to slide left
+    handleRight: '.goRight',//Control to slide right
+    container: "#ibenicSlider"
     });
   </pre>
 </div>
@@ -81,7 +128,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="lib/ibenicSlider.min.js">
-
+<script  src="lib/ibenicSlider.min.js"></script>
+<script>
+   $("#ibenicSlider .carousel-container").ibenicSlider({
+    	
+    itemNo: 5,
+    itemSlideNo: 5,
+    handleLeft: '#ibenicSlider .left',
+    handleRight: '#ibenicSlider .right',
+    container: "#ibenicSlider",
+    	
+    });
+</script>
   </body>
 </html>
