@@ -8,7 +8,7 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="css/ibenicSlider.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,13 +47,14 @@
   <h1>About</h1>
   </div>
   <p>
-    ibenicSlider is a responsive list slider. After developing a site which has multiple sliders that show a list I tried to use Bootstrap 3`s carousel.
+    <strong>ibenicSlider</strong> is a <em>responsive list slider</em>. After developing a site which has multiple sliders that show a list I tried to use Bootstrap 3`s carousel.
   </p>
   <p>Everything worked fine until I wanted some nice responsive way to show those lists on smaller devices without changing the size of them because then the images were too small.
     After few lines of code I decided to build my own List Slider.
   </p>
   <p>
     My goal was to have a slider which would slide a number of items, show only a number of items and change the number of shown and sliding items on resize/smaller device viewports.
+    Style independant so we can style it how we want. 
   </p>
 </div>
 
@@ -61,11 +62,26 @@
   <div class="page-header">
   <h1>Usage</h1>
   </div>
+  <p>It is really easy to set it. The slider calculates the width of the container by computing the number of items we want to show with the width of the list items (checks the first item in the list).</p>
+  <p>This is a list slider so we use only UL, for now.</p>
+  <code>
+    $(selector).ibenicSlider({
+    	/*Defaults*/
+    		itemNo: 3, //Number of items to show
+    		itemSlideNo: 1, //Number of items to slide
+    		handleLeft: '.goLeft', //Control to slide left
+        handleRight: '.goRight',//Control to slide right
+        container: null, //if we want an upper container so we can easily customize the position with CSS, set it to a selector such as "#container"
+    	  resize: true //this is default, if we dont want any resize we set it to false
+    });
+  </code>
 </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="lib/ibenicSlider.min.js">
+
   </body>
 </html>
