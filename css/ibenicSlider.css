@@ -1,48 +1,24 @@
-#ibenicSlider {
+#ibenicSlider,#ibenicSlider2 {
   position: relative;
   margin: 0 auto;
 }
-#ibenicSlider .carousel-container {
+#ibenicSlider .carousel-container,#ibenicSlider2 .carousel-container {
   overflow: hidden;
   margin: 0 auto;
 }
-#ibenicSlider .carousel-container .latestcovers li {
+#ibenicSlider .carousel-container .latestcovers li,
+#ibenicSlider2 .carousel-container .latestcovers li{
   float: left;
   width: 136px;
   margin-right: 20px;
 }
-#ibenicSlider .carousel-control {
+#ibenicSlider .carousel-control,
+#ibenicSlider2 .carousel-control{
   background-image: none;
 }
-#ibenicSlider.carousel-control .fa {
+#ibenicSlider.carousel-control, #ibenicSlider2.carousel-control {
   position: absolute;
   top: 20%;
 }
-#ibenicSlider .carousel-control.carousel-covers .carousel-arrow {
-  background-image: url("../img/deal-nav-icons.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  display: block;
-  height: 24px;
-  top: 40%;
-  position: absolute;
-  width: 14px;
-}
-#ibenicSlider .carousel-control.carousel-covers .carousel-arrow.toLeft {
-  background-position: 0 0;
-}
-#ibenicSlider .carousel-control.carousel-covers .carousel-arrow.toRight {
-  background-position: -14px 0;
-}
-#ibenicSlider .carousel-control.carousel-covers {
-  width: auto;
-}
-#ibenicSlider.carousel-control.left.carousel-covers {
-  left: -1em;
-}
-#ibenicSlider .carousel-control.right.carousel-covers {
-  right: -0.5em;
-}
-#ibenicSlider .carousel-control.right.opposite.carousel-covers {
-  right: -0.1em;
-}
+
+
