@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example | Listy - A Responsive List Slider</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/doc.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <style id="default">
+      .slider-container {
+        overflow: hidden;
+        margin: 0 auto;
+       }
+      .slider-container li {
+        float:left;
+
+          display:block;
+        list-style:none;
+      }
+
+
+
+        .slider-container ul {
+          list-style:none;
+          padding:0;
+        }
+       </style>
+  </head>
+  <body>
+ <header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="documentation.html">Listy</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="documentation_gettingStarted.html">Getting Started</a></li>
+        <li><a href="documentation_options.html">Options</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Examples <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="example_book.html">Book List Example</a></li>
+            <li><a href="example1.html">Simple Example</a></li>
+            <li><a href="example1_1.html">Simple Full Width Example</a></li>
+            <li><a href="example2.html">With Wrapper Container</a></li>
+            <li><a href="example2_1.html">With Wrapper Containe 2</a></li>
+            <li><a href="example3.html">With Content</a></li>
+            <li><a href="example3_1.html">With Content full width</a></li>
+            <li><a href="example_widgets.html">Widgets Example</a></li>
+            <li><a href="example_slider.html">Slider Example</a></li>
+            <li><a href="example_slider2.html">Carousel Example</a></li>
+            <li><a href="example_fullPage.html">Full Page Example</a></li>
+            <li><a href="example_fullPage3.html">Full Page Example with Left/Right Arrow Navigation</a></li>
+            <li><a href="example_fullPage2.html">Vertical Full Page Example</a></li>
+          </ul>
+        </li>
+         <li><a href="documentation_copy.html">Copyright & License</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-text">Author: <a href="http://codecanyon.net/user/docttor">docttor</a></p></li>
+      
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+ </header>
+
+  <section class="">
+  
+<style>
+  #widget1  {position:relative;margin:0 auto;overflow:hidden;}
+  #widget1 .slider-control {
+    position: absolute;
+    top:35%;
+    display:block;
+    width:48px;
+    height:48px;
+    cursor:pointer;
+    transition:all 1s ease;
+    z-index: 2;
+  }
+  #widget1 .slider-control span {
+  
+    position: absolute;
+    display:block;
+    padding-top:1em;
+    text-align: center;
+    
+    width:48px;
+    height:48px;
+    border-radius:100%;
+    background-color:#fff;
+   
+  }
+  #widget1 .slider-control.goLeft {
+    left:-1em;
+  }
+   #widget1 .slider-control.goLeft:hover {
+    left:0em;
+   }
+  #widget1 .slider-control.goRight {
+    right:-1em;
+  }
+  #widget1 .slider-control.goRight:hover {
+    right:0em;
+  }
+  
+  #widget1 li {
+    position: relative;
+    display:block;
+   
+
+    overflow: hidden;
+      }
+      #widget1 li.green {
+        background-color:#18bc9c;
+      }
+ #widget1 li > img {
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    display:block;
+ }
+
+  #widget1 li .img-background {
+    position: absolute;
+    z-index:1;
+    width:100%;
+    height:auto;
+    left:0;
+    top:0;
+  }
+  #widget1 li h2 {
+    position: relative;
+    z-index: 3;
+    font-size: 1em;
+    margin-top:10em;
+    font-weight: bold;
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    padding:0.5em;
+  }
+  @media screen and (max-width:699px){
+    #widget1 li {
+      width:480px;
+      height:240px;
+    }
+  }
+  @media screen and (max-width:500px){
+    #widget1 li {
+      width:240px;
+      height:120px;
+    }
+  }
+</style>
+<div id="widget1" >
+
+  <!-- Controls -->
+   <a class="goRight   slider-control" >
+              <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <a class="goLeft  slider-control" >
+              <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+           
+          
+    <div class="slider-container" >
+        
+        <ul >
+          
+          
+          <li class="green text-center"><br/><br/>
+          <h1>This is a Vertical Full Page</h1>
+          <p>It does not need to be a image! </p></li>
+          <li><img src="img/eagle-full.jpg"  class="img-background"/>
+          <h2>Eagle Eye</h2></li>
+          <li><img src="img/lighthouse-full.jpg"  class="img-background"/>
+          <h2>The Lighthouse</h2></li>
+          
+          <li><img src="img/palms-full.jpg"  class="img-background"/>
+          <h2>Palms</h2></li>
+          
+          <li><img src="img/tower-full.jpg"  class="img-background"/>
+          <h2>Baywatch</h2></li>
+            <li><img src="img/birds-full.jpg"  class="img-background"/>
+          <h2>Birds Flying</h2></li>
+          <li><img src="img/eagle-full.jpg"  class="img-background"/>
+          <h2>Eagle Eye</h2></li>
+          <li><img src="img/lighthouse-full.jpg"  class="img-background"/>
+          <h2>The Lighthouse</h2></li>
+          
+          <li><img src="img/palms-full.jpg"  class="img-background"/>
+          <h2>Palms</h2></li>
+          
+          <li><img src="img/tower-full.jpg"  class="img-background"/>
+          <h2>Baywatch</h2></li>
+        </ul>
+        </div>
+        
+        </div>
+
+     
+     
+
+      <div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#html1" aria-controls="html1" role="tab" data-toggle="tab">HTML</a></li>
+    <li role="presentation"><a href="#css1" aria-controls="css1" role="tab" data-toggle="tab">CSS</a></li>
+    <li role="presentation"><a href="#js1" aria-controls="js1" role="tab" data-toggle="tab">JS</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="html1">
+    <pre>
+        <code class="language-markup">
+          
+&lt;div id="widget1" >
+
+ &lt;a class="goLeft  slider-control" >
+    &lt;span class="glyphicon glyphicon-chevron-left" aria-hidden="true">&lt;/span>
+    &lt;span class="sr-only">Previous&lt;/span>
+  &lt;/a>
+  &lt;a class="goRight   slider-control" >
+    &lt;span class="glyphicon glyphicon-chevron-right" aria-hidden="true">&lt;/span>
+    &lt;span class="sr-only">Next&lt;/span>
+  &lt;/a>
+&lt;div class="slider-container" >
+        
+  &lt;ul >
+   
+    &lt;li>
+      &lt;img src="img/birds.jpg"  class="img-background"/>
+      &lt;h2>Birds Flying&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/eagle.jpg"  class="img-background"/>
+      &lt;h2>Eagle Eye&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/lighthouse.jpg"  class="img-background"/>
+      &lt;h2>The Lighthouse&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/palms.jpg"  class="img-background"/>
+      &lt;h2>Palms&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/tower.jpg"  class="img-background"/>
+      &lt;h2>Baywatch&lt;/h2>
+    &lt;/li>
+     &lt;li>
+      &lt;img src="img/birds.jpg"  class="img-background"/>
+      &lt;h2>Birds Flying&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/eagle.jpg"  class="img-background"/>
+      &lt;h2>Eagle Eye&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/lighthouse.jpg"  class="img-background"/>
+      &lt;h2>The Lighthouse&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/palms.jpg"  class="img-background"/>
+      &lt;h2>Palms&lt;/h2>
+    &lt;/li>
+    &lt;li>
+      &lt;img src="img/tower.jpg"  class="img-background"/>
+      &lt;h2>Baywatch&lt;/h2>
+    &lt;/li>
+  &lt;/ul>
+  <!-- Controls -->
+ 
+  &lt;/div>
+&lt;/div>
+
+        </code>
+      </pre>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="css1">
+      <pre>
+        <code class="language-css">
+
+   #widget1  {position:relative;margin:0 auto;overflow:hidden;}
+  #widget1 .slider-control {
+    position: absolute;
+    top:35%;
+    display:block;
+    width:48px;
+    height:48px;
+    cursor:pointer;
+    transition:all 1s ease;
+    z-index: 2;
+  }
+  #widget1 .slider-control span {
+  
+    position: absolute;
+    display:block;
+    padding-top:1em;
+    text-align: center;
+    
+    width:48px;
+    height:48px;
+    border-radius:100%;
+    background-color:#fff;
+   
+  }
+  #widget1 .slider-control.goLeft {
+    left:-1em;
+  }
+   #widget1 .slider-control.goLeft:hover {
+    left:0em;
+   }
+  #widget1 .slider-control.goRight {
+    right:-1em;
+  }
+  #widget1 .slider-control.goRight:hover {
+    right:0em;
+  }
+  
+  #widget1 li {
+    position: relative;
+    display:block;
+   
+
+    overflow: hidden;
+      }
+ #widget1 li > img {
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    display:block;
+ }
+
+  #widget1 li .img-background {
+    position: absolute;
+    z-index:1;
+    width:100%;
+    height:auto;
+    left:0;
+    top:0;
+  }
+  #widget1 li h2 {
+    position: relative;
+    z-index: 3;
+    font-size: 1em;
+    margin-top:10em;
+    font-weight: bold;
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    padding:0.5em;
+  }
+   #widget1 li.green {
+        background-color:#18bc9c;
+      }
+  
+        </code>
+      </pre>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="js1">
+      <pre>
+        <code class="language-javascript">
+$(document).ready(function(){
+      $("#widget1 .slider-container").Listy({
+          configDefault: {items:1, sliding:1},
+          config: {
+            "480": {
+              items: 1,
+              sliding: 1
+            },
+            
+          },
+          autoWidth: true,
+          container: "#widget1",
+          animationEffect: "ease-in-out",
+          animationDuration: 1000,
+          fullPage: true,
+          vertical: true,
+      });
+
+  
+  });
+      </code>
+      </pre> 
+    </div>
+  </div>
+
+</div>
+ </section>
+
+ 
+
+ 
+   
+
+ <hr/>
+
+ <section class="container">
+   <p>This documentation is used to learn how to use the Listy Slider and also see other examples on how it can be used</p>
+ </section>
+
+
+
+
+
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/listy.min.js"></script>
+    <script>
+  $(document).ready(function(){
+      $("#widget1 .slider-container").Listy({
+          configDefault: {items:1, sliding:1},
+          config: {
+            "480": {
+              items: 1,
+              sliding: 1
+            },
+            
+          },
+          autoWidth: true,
+          container: "#widget1",
+          animationEffect: "ease-in-out",
+          animationDuration: 1000,
+          fullPage: true,
+          vertical: true,
+      });
+
+  
+  });
+
+ 
+</script>
+
+  </body>
+</html>
